@@ -109,7 +109,18 @@ function reverse(value) {
   // ---------------------
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
   // ---------------------
-
+  const charFreq = function(string){
+    let list = {};
+    let length = string.length;
+    for (var i = 0; i < length; i++) {
+    if (string.charAt(i) in list)
+      list[string.charAt(i)] += +1; , // <- charAt method returns the first character of a string
+    else
+      list[string.charAt(i)] = 1;
+    }
+    return list;
+  }
+  console.log(charFreq("abbabcbdbabdbdbabababcbcbab"));
 
   ////////////////////////////////////////////////////////////////////////
   /////////////////////////DO NOT CHANGE CODE BELOW///////////////////////
