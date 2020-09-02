@@ -114,7 +114,7 @@ function reverse(value) {
     let length = string.length;
     for (var i = 0; i < length; i++) {
     if (string.charAt(i) in list)
-      list[string.charAt(i)] += +1; , // <- charAt method returns the first character of a string
+      list[string.charAt(i)] += +1; // <- charAt method returns the first character of a string
     else
       list[string.charAt(i)] = 1;
     }
