@@ -85,8 +85,7 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
-
-
+// The answer is [c] because var is function scope so the z is being hoisted to the top.
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
