@@ -179,7 +179,9 @@ var callTenTimes = function(callback) {
 };
 
 // Put your answer below -------------------------
+function callNtimes(){
 
+}
 
 // -----------------------------------------------
 
@@ -196,19 +198,23 @@ var callTenTimes = function(callback) {
 
 // HINT: "global scope"
 
-var score = 0;
-
-var increaseScore = function() {
+// var score = 0;
+//
+// var increaseScore = function() {
+//   score++;
+// };
+//
+// var decreaseScore = function() {
+//   score--;
+// }; console.log(score);
+// Put your answer below -------------------------
+const score = 0
+let increaseScore = function(){
   score++;
 };
-
-var decreaseScore = function() {
+let decreaseScore = function(){
   score--;
-};
-
-// Put your answer below -------------------------
-
-
+}; console.log(score);
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
