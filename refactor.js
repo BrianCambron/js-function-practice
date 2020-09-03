@@ -106,8 +106,7 @@ var reverseStr = function(str) {
 };
 
 // Put your answer below -------------------------
-
-
+function reverseString(str) { return arr.split('').reverse().join(''); }
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
