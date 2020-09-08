@@ -85,7 +85,7 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
-// The answer is [c] because var is function scope so the z is being hoisted to the top.
+// The answer is [c] setTimeout has a delay so it does not fire right away
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -106,7 +106,9 @@ var reverseStr = function(str) {
 };
 
 // Put your answer below -------------------------
-function reverseString(str) { return arr.split('').reverse().join(''); }
+function reverseString(str) {
+  return str.split('').reverse().join('');
+}
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -139,7 +141,18 @@ var spanishColor = function(colorName) {
 };
 
 // Put your answer below -------------------------
+  const colors = {
+    rojo: "#ff0000",
+    blanco: "#ffffff",
+    azul: "#0000ff",
+    verde: "#00ff00",
+    negro: "#000000",
+  }
+  function spanishColor(colorName){
 
+    return colors[colorName];
+  }
+console.log(spanishColor('rojo'));
 
 // -----------------------------------------------
 
@@ -157,7 +170,7 @@ var foo = "bar";
 
 // Put your answer below -------------------------
 var foo;
-foo = "bar"
+foo = "bar";
 
 // -----------------------------------------------
 
@@ -179,8 +192,9 @@ var callTenTimes = function(callback) {
 };
 
 // Put your answer below -------------------------
-function callNtimes(){
-
+function callNtimes(nTimes){
+  let range = Array.from(Array(10).keys());
+  range.forEach(nTimes);
 }
 
 // -----------------------------------------------
@@ -197,24 +211,33 @@ function callNtimes(){
 // code to protect from this.
 
 // HINT: "global scope"
+//
+var score = 0;
 
-// var score = 0;
-//
-// var increaseScore = function() {
-//   score++;
-// };
-//
-// var decreaseScore = function() {
-//   score--;
-// }; console.log(score);
-// Put your answer below -------------------------
-const score = 0
-let increaseScore = function(){
+var increaseScore = function() {
   score++;
 };
-let decreaseScore = function(){
+
+var decreaseScore = function() {
   score--;
 }; console.log(score);
+// Put your answer below -------------------------
+let addPoints = function(){
+  let score = 0;
+    return {
+      increaseScore: function (){
+        return score++;
+        console.log(score);
+      },
+        decreaseScore: function(){
+          return score--;
+          console.log(score);
+        }
+  }
+
+
+};
+
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -226,15 +249,21 @@ let decreaseScore = function(){
 // twoPlusTwo gets set to `undefined`. Refactor
 // the function to make it work.
 
-var addNumbers = function(numberA, numberB) {
+// var addNumbers = function(numberA, numberB) {
+//   console.log(numberA + numberB);
+// };
+//
+// var twoPlusTwo = addNumbers(2,2);
+// console.log(twoPlusTwo);
+
+// Put your answer below -------------------------
+let addNumbers = function(numberA, numberB) {
+  return numberA + numberB;
   console.log(numberA + numberB);
 };
 
-var twoPlusTwo = addNumbers(2,2);
-
-// Put your answer below -------------------------
-
-
+let twoPlusTwo = addNumbers(2,2);
+console.log(twoPlusTwo);
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -259,8 +288,12 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
+//because a number plus an undefined is not a mathematical expression (no param) so that is why it returns NaN
+var speed = 0;
 
-
+var accelerate = function(amount = 1) {
+  speed += amount;
+};
 // -----------------------------------------------
 
 //////////////////////////////////////////////////

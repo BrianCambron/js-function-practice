@@ -30,8 +30,8 @@
   // ---------------------
   // Define a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
   // ---------------------
-    function isVowel(x) {
-      if (x == "a" || x == "e" || x == "i" || x == "o" || x == "u") {
+    function isVowel(char) {
+      if (char === "a" || char === "e" || char === "i" || char === "o" || char === "u") {
         return true;
       } else {
         return false;
@@ -112,7 +112,7 @@ function reverse(value) {
   const charFreq = function(string){
     let list = {};
     let length = string.length;
-    for (var i = 0; i < length; i++) {
+    for (let i = 0; i < length; i++) {
     if (string.charAt(i) in list)
       list[string.charAt(i)] += +1; // <- charAt method returns the first character of a string
     else
